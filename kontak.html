@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>e-Education Diabetes</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-item">Dashboard</a></li>
+                    <li><a href="mengetahui.html" class="nav-item">Mengetahui</a></li>
+                    <li><a href="mencegah.html" class="nav-item">Mencegah</a></li>
+                    <li><a href="mengobati.html" class="nav-item">Mengobati</a></li>
+                    <li><a href="kontak.html" class="nav-item">Kontak Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <h2>Kontak Kami</h2>
+        <form action="#">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Keluhan atau Saran:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <button type="submit">Kirim</button>
+        </form>
+    
+        <p class="konsultasi-text">Untuk konsultasi lebih lanjut, kunjungi halaman <a href="https://www.halodoc.com" target="_blank">Halodoc</a>.</p>
+    </section>
+    
+
+    <script>
+        const submitButton = document.querySelector("button");
+    
+        submitButton.addEventListener("click", function() {
+            alert("Pesan Anda telah terkirim!");
+        });
+    </script>
+    
+
+    <footer>
+        <p>&copy; 2024 e-Education Diabetes. Project Informatika Medik.</p>
+    </footer>
+</body>
+</html>

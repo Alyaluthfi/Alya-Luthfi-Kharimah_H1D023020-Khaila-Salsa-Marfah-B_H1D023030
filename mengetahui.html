@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengetahui Diabetes - e-Education Diabetes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>e-Education Diabetes</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-item">Dashboard</a></li>
+                    <li><a href="mengetahui.html" class="nav-item">Mengetahui</a></li>
+                    <li><a href="mencegah.html" class="nav-item">Mencegah</a></li>
+                    <li><a href="mengobati.html" class="nav-item">Mengobati</a></li>
+                    <li><a href="kontak.html" class="nav-item">Kontak Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="intro">
+        <h2>Apa Itu Diabetes?</h2>
+        <p>Diabetes adalah penyakit kronis yang terjadi ketika tubuh tidak dapat memproduksi cukup insulin atau tidak dapat menggunakan insulin dengan efektif. Hal ini menyebabkan kadar gula darah menjadi sangat tinggi.</p>
+    </section>
+
+    <section class="content">
+        <h3>Jenis-Jenis Diabetes</h3>
+        <ul>
+            <li><b>Diabetes Tipe 1:</b> Terjadi ketika sistem kekebalan tubuh menyerang dan merusak sel-sel penghasil insulin di pankreas.</li>
+            <li><b>Diabetes Tipe 2:</b> Merupakan kondisi di mana tubuh tidak dapat menggunakan insulin dengan efektif atau tidak cukup memproduksi insulin.</li>
+            <li><b>Diabetes Melitus Gestasional:</b> Diabetes yang berkembang selama kehamilan, biasanya hilang setelah melahirkan, tetapi dapat meningkatkan risiko diabetes tipe 2 di masa depan.</li>
+            <li><b>Diabetes Monogenik: </b> Kondisi genetik yang menyebabkan diabetes akibat mutasi atau perubahan pada satu gen.</li>
+        </ul>
+    </section>
+
+    <section class="content">
+        <h3>Faktor Penyebab Diabetes</h3>
+        <ul>
+            <li>Genetika: Riwayat keluarga yang memiliki diabetes meningkatkan risiko Anda.</li>
+            <li>Obesitas: Berat badan berlebih dapat meningkatkan resistensi insulin.</li>
+            <li>Kurangnya aktivitas fisik: Tidak cukup bergerak dapat menyebabkan penurunan penggunaan gula dalam darah.</li>
+            <li>Usia: Diabetes tipe 2 lebih sering terjadi pada orang yang lebih tua.</li>
+        </ul>
+    </section>
+
+    <section class="content">
+        <h3>Bahaya Diabetes</h3>
+        <p>Diabetes dapat menyebabkan berbagai komplikasi serius, seperti:</p>
+        <ul>
+            <li>Gangguan penglihatan (retinopati)</li>
+            <li>Kerusakan saraf (neuropati)</li>
+            <li>Penyakit jantung dan stroke</li>
+            <li>Gagal ginjal</li>
+            <li>Amputasi pada kasus yang parah</li>
+        </ul>
+    </section>
+
+    <section class="chart">
+        <h3>Analisis Banyaknya Penderita Diabetes di Setiap Provinsi</h3>
+        <p>Berikut adalah grafik yang menunjukkan tingkat prevalensi diabetes di berbagai provinsi di Indonesia:</p>
+        <!-- Grafik akan dihasilkan dengan menggunakan chart.js atau library sejenis -->
+        <canvas id="diabetesChart" width="400" height="200"></canvas>
+    </section>
+
+    <footer class="footer-mencegah">
+        <p>&copy; 2024 e-Education Diabetes. Project Informatika Medik.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Data untuk grafik dengan lebih banyak provinsi
+        const ctx = document.getElementById('diabetesChart').getContext('2d');
+        const diabetesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'DKI Jakarta', 'Jawa Barat', 'Jawa Tengah', 'Bali', 'Sumatera Utara', 
+                    'Kalimantan Timur', 'Sulawesi Selatan', 'Papua', 'Nusa Tenggara Barat', 'Yogyakarta',
+                    'Riau', 'Aceh', 'Jambi', 'Bengkulu', 'Lampung', 'Kalimantan Selatan'
+                ], // Nama Provinsi
+                datasets: [{
+                    label: 'Prevalensi Diabetes (%)',
+                    data: [
+                        8.5, 7.2, 6.3, 4.8, 9.1, 
+                        5.4, 7.8, 3.6, 6.0, 7.0, 
+                        5.9, 6.8, 5.2, 4.3, 7.4, 5.7
+                    ], // Data prevalensi diabetes untuk masing-masing provinsi
+                    backgroundColor: '#4CAF50',
+                    borderColor: '#388E3C',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1 // Menentukan jarak antara nilai pada sumbu Y
+                        },
+                        title: {
+                            display: true,
+                            text: 'Prevalensi Diabetes (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Provinsi'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>

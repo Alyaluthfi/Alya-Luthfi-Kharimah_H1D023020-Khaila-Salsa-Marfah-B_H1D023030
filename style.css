@@ -1,0 +1,348 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f0f8ff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #4CAF50;
+    color: white;
+    position: relative;
+}
+
+.nav-logo {
+    margin-right: 200px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f0f8ff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Ucapan selamat datang */
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.welcome-heading {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    animation: textAnimation 3s ease-in-out;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    color: #555;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* About website box */
+.about-website {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-box {
+    background-color: #e8f5e9;
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.about-box h3 {
+    color: #4CAF50;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Tujuan Website */
+.goals {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-top: 40px;
+}
+
+.goals h3 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.goals ul {
+    list-style-type: none;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.goals ul li {
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.goals ul li:hover {
+    background-color: #e8f5e9;
+    cursor: pointer;
+}
+
+/* Bagian khusus mengetahui.html */
+.intro, .content, .chart {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.intro h2, .content h3, .chart h3 {
+    color: #4CAF50;
+}
+
+.intro p, .content p, .content ul, .chart p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.content ul, .chart ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Bagian chart canvas */
+.chart canvas {
+    width: 100%;
+    height: auto;
+}
+
+/* Kontak Kami */
+section h2 {
+    text-align: center;
+    color: #4CAF50;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background: #e8f5e9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.1em;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.konsultasi-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+.mencegah, .mencegah2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-mencegah{
+    gap: 20px;
+}
+
+.h1-mencegah {
+    text-align: left;
+    color: #4CAF50;
+    padding: 20px;
+    font-size: 60px;
+    margin-left: 150px;
+}
+
+.img-mencegah2{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.mencegah-box, .mencegah2-box, .mencegah3-box, .mencegah4-box{
+    background-color: #e8f5e9;
+    padding: 30px;
+    max-width: 800px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-in-out;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.5s ease, box-shadow 0.5s ease;
+    margin-bottom: 20px;
+}
+.mencegah-box:hover, .mencegah2-box:hover, .mencegah3-box:hover,.mencegah4-box:hover{
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: #58915b;
+    transform: translateY(-2px);
+}
+
+.more-text{
+    display: none;
+}
+.mencegah-box:hover .more-text,
+.mencegah2-box:hover .more-text, 
+.mencegah3-box:hover .more-text,
+.mencegah4-box:hover .more-text{
+    display: inline;
+}
+
+.mengobati, .mengobati2 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2-mengobati {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    border: 1px solid #45a049;
+    border-radius: 5px;
+    background-color: #4CAF50;
+}
+
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textAnimation {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: #f0f8ff;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
